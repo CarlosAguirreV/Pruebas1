@@ -57,7 +57,7 @@ class FantasmaActivity : AppCompatActivity(), View.OnTouchListener {
         btnRef.setOnClickListener {
             mostrarMensaje(
                 "Información",
-                "Nombre actividad: FantasmaActivity\nNombre layer: activity_fantasma"
+                "Clase: FantasmaActivity\nLayer: activity_fantasma"
             )
         }
         btnVolver.setOnClickListener { finish() }

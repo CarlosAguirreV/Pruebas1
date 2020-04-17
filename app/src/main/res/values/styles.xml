@@ -8,6 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+    </style>
+
 
     <style name="ButtonBasic" parent="Theme.AppCompat.Light">
         <item name="android:layout_width">match_parent</item>
@@ -43,13 +47,6 @@
     <style name="ButtonAcerca" parent="ButtonTheme">
         <item name="android:backgroundTint">@color/colorPrimary</item>
         <item name="android:drawableEnd">@drawable/ic_person</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:layout_weight">1</item>
-    </style>
-
-    <style name="ButtonDonativo" parent="ButtonTheme">
-        <item name="android:backgroundTint">@color/colorPrimary</item>
-        <item name="android:drawableEnd">@drawable/ic_local_cafe</item>
         <item name="android:textStyle">bold</item>
         <item name="android:layout_weight">1</item>
     </style>
