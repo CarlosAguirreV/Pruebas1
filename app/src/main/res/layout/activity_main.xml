@@ -1,27 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-
-    <ImageView
-        android:id="@+id/imgTitulo"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:padding="15dp"
-        android:src="@drawable/ic_titulo_pruebas_1" />
+    tools:context=".controlador.actividades.MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/lyOtros"
-        android:layout_below="@+id/imgTitulo"
-        android:paddingStart="15dp"
-        android:paddingEnd="15dp"
-        android:paddingBottom="15dp">
+        android:layout_above="@+id/lyOtros">
 
         <include
             android:id="@+id/iMenuElementos"
@@ -36,13 +23,17 @@
         android:layout_alignParentBottom="true"
         android:background="@color/colorLightGray"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp">
 
         <Button
             android:id="@+id/btnCodigo"
             style="@style/ButtonLink"
             android:layout_marginBottom="5dp"
-            android:text="Código" />
+            android:backgroundTint="@color/colorWhite"
+            android:text="@string/codigo" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -53,13 +44,17 @@
             <Button
                 android:id="@+id/btnAcerca"
                 style="@style/ButtonAcerca"
-                android:text="Acerca" />
+                android:layout_marginBottom="2dp"
+                android:backgroundTint="@color/colorWhite"
+                android:text="@string/acerca" />
 
             <Button
                 android:id="@+id/btnCerrar"
                 style="@style/ButtonExit"
                 android:layout_marginStart="5dp"
-                android:text="Cerrar" />
+                android:layout_marginBottom="2dp"
+                android:backgroundTint="@color/colorWhite"
+                android:text="@string/cerrar" />
         </LinearLayout>
 
 

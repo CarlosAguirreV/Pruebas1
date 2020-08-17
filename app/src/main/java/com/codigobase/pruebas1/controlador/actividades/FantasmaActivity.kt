@@ -1,14 +1,12 @@
-package com.codigobase.pruebas1
+package com.codigobase.pruebas1.controlador.actividades
 
-import android.content.DialogInterface
 import android.graphics.Point
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.MotionEvent
 import android.view.View
-import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
+import com.codigobase.pruebas1.R
 import kotlinx.android.synthetic.main.activity_fantasma.*
 import kotlinx.android.synthetic.main.barra_superior.*
 
@@ -41,12 +39,12 @@ class FantasmaActivity : AppCompatActivity(), View.OnTouchListener {
         sensorToques.setOnTouchListener(this)
 
         // Definir titulo
-        lblTituloBarra.text = "Fantasma"
+        lblTituloBarra.text = getString(R.string.fantasma)
 
         // Mostrar mensaje de como se usa
         mostrarMensaje(
-            "Instrucciones",
-            "Al arrastrar el dedo por la pantalla se moverá la vela y el fantasma huirá.\nO al menos eso es lo que debería suceder."
+            getString(R.string.instruc),
+            getString(R.string.ins_fantasma)
         )
 
         // Cargar los eventos de boton
@@ -56,8 +54,8 @@ class FantasmaActivity : AppCompatActivity(), View.OnTouchListener {
     private fun eventosBoton() {
         btnRef.setOnClickListener {
             mostrarMensaje(
-                "Información",
-                "Clase: FantasmaActivity\nLayer: activity_fantasma"
+                getString(R.string.info),
+                getString(R.string.ref_fantasma)
             )
         }
         btnVolver.setOnClickListener { finish() }
@@ -65,8 +63,8 @@ class FantasmaActivity : AppCompatActivity(), View.OnTouchListener {
 
     override fun onTouch(v: View?, event: MotionEvent?): Boolean {
         if (v?.id == sensorToques.id) {
-            var valorX = event?.getAxisValue(MotionEvent.AXIS_X)
-            var valorY = event?.getAxisValue(MotionEvent.AXIS_Y)
+            val valorX = event?.getAxisValue(MotionEvent.AXIS_X)
+            val valorY = event?.getAxisValue(MotionEvent.AXIS_Y)
 
             if (valorX != null && valorY != null) {
                 refrescarCoordenadas()
@@ -88,14 +86,14 @@ class FantasmaActivity : AppCompatActivity(), View.OnTouchListener {
     }
 
     private fun posicionarVela(x: Int, y: Int) {
-        var mitadImagen = imgVela.width / 2
+        val mitadImagen = imgVela.width / 2
         imgVela.x = x.toFloat() - 30
         imgVela.y = y.toFloat() + mitadImagen
     }
 
     private fun mostrarValores(coordenadas: Point) {
-        var cadenaX = "X: " + coordenadas.x
-        var cadenaY = "Y: " + coordenadas.y
+        val cadenaX = "X: " + coordenadas.x
+        val cadenaY = "Y: " + coordenadas.y
 
         lblX.text = cadenaX
         lblY.text = cadenaY
@@ -122,13 +120,10 @@ class FantasmaActivity : AppCompatActivity(), View.OnTouchListener {
     private fun refrescarAreaMovimiento() {
         areaMovimiento.x = sensorToques.width
         areaMovimiento.y = sensorToques.height
-
-        Log.e("ALGO X", "${areaMovimiento.x}")
-        Log.e("ALGO Y", "${areaMovimiento.y}")
     }
 
     private fun mostrarMensaje(titulo: String, mensaje: String) {
-        var cuadroDialogo: AlertDialog.Builder = AlertDialog.Builder(this)
+        val cuadroDialogo: AlertDialog.Builder = AlertDialog.Builder(this)
         cuadroDialogo.setTitle(titulo).setMessage(mensaje)
         cuadroDialogo.setPositiveButton("Aceptar", null)
         cuadroDialogo.show()

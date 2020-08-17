@@ -17,6 +17,8 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:padding">10dp</item>
+        <item name="android:layout_marginEnd">5dp</item>
+        <item name="android:layout_marginStart">5dp</item>
         <item name="android:textAllCaps">false</item>
     </style>
 
@@ -24,45 +26,81 @@
         <item name="android:background">@drawable/btn_forma</item>
     </style>
 
+    <style name="ButtonGrande">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/btn_forma2</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_margin">20dp</item>
+    </style>
+
     <style name="ButtonVolver" parent="ButtonBasic">
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+        <item name="android:textColor">@color/colorWhite</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:backgroundTint">@color/colorLightGray</item>
         <item name="android:drawableStart">@drawable/ic_return</item>
     </style>
 
     <style name="ButtonInfo" parent="ButtonBasic">
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+        <item name="android:textColor">@color/colorWhite</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:backgroundTint">@color/colorLightGray</item>
         <item name="android:drawableStart">@drawable/ic_code</item>
     </style>
 
     <style name="ButtonNormal" parent="ButtonTheme">
         <item name="android:layout_marginTop">10dp</item>
-        <item name="android:backgroundTint">@color/colorPrimary</item>
         <item name="android:drawableEnd">@drawable/ic_play</item>
     </style>
 
     <style name="ButtonAcerca" parent="ButtonTheme">
-        <item name="android:backgroundTint">@color/colorPrimary</item>
         <item name="android:drawableEnd">@drawable/ic_person</item>
         <item name="android:textStyle">bold</item>
         <item name="android:layout_weight">1</item>
     </style>
 
     <style name="ButtonLink" parent="ButtonTheme">
-        <item name="android:backgroundTint">@color/colorPrimary</item>
         <item name="android:drawableEnd">@drawable/ic_git</item>
         <item name="android:textStyle">bold</item>
         <item name="android:layout_weight">1</item>
     </style>
 
     <style name="ButtonExit" parent="ButtonTheme">
-        <item name="android:backgroundTint">@color/colorPrimary</item>
         <item name="android:drawableEnd">@drawable/ic_exit</item>
         <item name="android:textStyle">bold</item>
         <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="BigText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">100sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorDark</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="Separador">
+        <item name="android:drawableStart">@drawable/ic_bookmark</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textColor">@color/colorDark</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextoLectura">
+        <item name="android:textSize">17sp</item>
     </style>
 
 </resources>

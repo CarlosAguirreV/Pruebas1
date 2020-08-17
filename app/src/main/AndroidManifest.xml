@@ -13,12 +13,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LuzSensorActivity" />
+        <activity android:name=".controlador.actividades.AcercaDeActivity"></activity>
         <activity
-            android:name=".FantasmaActivity"
+            android:name=".controlador.Corrutinas"
+            android:configChanges="screenSize|orientation" />
+        <activity
+            android:name=".controlador.actividades.UiActivity"
+            android:configChanges="screenSize|orientation" />
+        <activity
+            android:name=".controlador.actividades.LuzSensorActivity"
+            android:configChanges="screenSize|orientation" />
+        <activity
+            android:name=".controlador.actividades.FantasmaActivity"
             android:screenOrientation="fullSensor" />
         <activity
-            android:name=".MainActivity"
+            android:name=".controlador.actividades.MainActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/SplashTheme">
             <intent-filter>

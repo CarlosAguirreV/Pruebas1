@@ -1,3 +1,77 @@
 <resources>
     <string name="app_name">Pruebas1</string>
+
+    <!-- Separadores -->
+    <string name="sensores">Sensores</string>
+    <string name="ig">Interfaz gráfica</string>
+    <string name="hilosCorrutinas">Hilos y corrutinas</string>
+    <string name="multimedia">Multimedia</string>
+    <string name="bd">Bases de datos y datos</string>
+    <string name="elementosExternos">Elementos externos</string>
+
+    <!-- Barra inferior menu -->
+    <string name="codigo">Código</string>
+    <string name="acerca">Acerca</string>
+    <string name="cerrar">Cerrar</string>
+
+    <!-- Barra superior -->
+    <string name="titulo">Título</string>
+    <string name="ref">Referencias</string>
+    <string name="volver">Volver</string>
+
+    <!-- Otros -->
+    <string name="vacio">#</string>
+    <string name="botones">Botones</string>
+    <string name="cuadro_dialogo">Cuadro de dialogo</string>
+    <string name="error">ERROR</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="fin">Fin</string>
+
+    <!-- Explicaciones -->
+    <string name="info">Información</string>
+    <string name="instruc">Instrucciones</string>
+
+    <!-- FantasmaActivity -->
+    <string name="fantasma_on">Fantasma - OnTouchListener</string>
+    <string name="fantasma">Fantasma</string>
+    <string name="vela">Vela</string>
+    <string name="ins_fantasma">Al arrastrar el dedo por la pantalla se moverá la vela y el fantasma huirá.\nO al menos eso es lo que debería suceder.</string>
+    <string name="ref_fantasma">Clase: FantasmaActivity\nLayer: activity_fantasma</string>
+
+    <!-- LuzSensor -->
+    <string name="sensor_luz">Sensor de luz - SensorEventListener</string>
+    <string name="luz">Sensor de luz</string>
+    <string name="ins_luz">Para esta prueba se usa el sensor de luz, conforme más luz haya, más cargado estará la barra de progreso.</string>
+    <string name="ref_luz">Clase: LuzSensorActivity\nLayer: activity_luz_sensor\nManifest: android.hardware.sensor.acelerometer</string>
+    <string name="valor_luz">Valor del sensor</string>
+    <string name="fallo_luz">Fallo con el sensor de la luz.</string>
+
+    <!-- UiActivity -->
+    <string name="ui">Elementos UI</string>
+    <string name="elementos_ui">Elementos UI - res/drawable</string>
+    <string name="ins_ui">"A continuación se muestran varios elementos de la interfaz de usuario (UI).</string>
+    <string name="ref_ui">Clase: UiActivity\nLayer: activity_ui</string>
+
+    <string name="animaciones">Animaciones</string>
+
+    <!-- Corrutinas -->
+    <string name="corrutinas">Corrutinas</string>
+    <string name="ins_corrutinas">Pulsa el boton "Cuenta atras" y hará una cuenta regresiva.\nPulsa después el boton "Mensaje Toast" y veras que no se bloquea.\n\nUna corrutina es un subproceso que se realiza en el mismo hilo.\nUna de las ventajas de usar subrutinas es que no bloquean toda la aplicación mientras trabajan, ya que operan en paralelo al hilo principal.</string>
+    <string name="ref_corrutinas">Clase: Corrutinas\nLayer: activity_corrutinas</string>
+    <string name="cuentaAtras">Cuenta atras</string>
+    <string name="mensajeToast">Mensaje toast</string>
+    <string name="mensajeCorrutinas">Como puedes ver se puede ejecutar ambas cosas a la vez, si no lo ves pulsa el boton de arriba.\nVeces pulsadas </string>
+
+
+    <string name="sonidoMusica">Sonidos y música</string>
+
+    <string name="bdConRoom">Base de datos con ROOM</string>
+
+    <string name="guardarCargar">Guardar y cargar datos en la APP</string>
+
+    <string name="publicidad">Uso de publicidad</string>
+
+    <!-- Acerca de -->
+    <string name="acercaDe">Esta aplicación ha sido creada con fines didácticos, a fin de aprender y transmitir lo aprendido.\n\nAplicación creada por Carlos Aguirre\n\nTambién doy las gracias a\n - Jorgesys (Stack Overflow)</string>
+
 </resources>

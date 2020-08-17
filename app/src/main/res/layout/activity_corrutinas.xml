@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controlador.Corrutinas">
+
+    <include
+        android:id="@+id/iBarraSuperior"
+        layout="@layout/barra_superior" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/iBarraSuperior">
+
+        <Button
+            android:id="@+id/btnCuentaAtras"
+            style="@style/ButtonGrande"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/colorGreen2"
+            android:text="@string/cuentaAtras" />
+
+        <Button
+            android:id="@+id/btnToast"
+            style="@style/ButtonGrande"
+            android:layout_gravity="bottom"
+            android:text="@string/mensajeToast" />
+
+        <TextView
+            android:id="@+id/lblCuentaAtras"
+            style="@style/BigText"
+            android:text="@string/vacio"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+
+</RelativeLayout>

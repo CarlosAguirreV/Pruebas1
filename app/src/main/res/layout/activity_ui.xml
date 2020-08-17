@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controlador.actividades.UiActivity">
+
+    <include
+        android:id="@+id/iBarraSuperior"
+        layout="@layout/barra_superior" />
+
+    <FrameLayout
+        android:id="@+id/contenidoFragmento"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/menu_inferior_ui"
+        android:layout_below="@+id/iBarraSuperior" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/menu_inferior_ui"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        app:itemIconTint="@color/colorWhite"
+        app:itemTextColor="@color/colorWhite"
+        app:menu="@menu/menu_ui" />
+
+</RelativeLayout>

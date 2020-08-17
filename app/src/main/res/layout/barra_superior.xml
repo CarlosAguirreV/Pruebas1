@@ -16,12 +16,14 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_centerInParent="true"
-            android:text="Titulo"
+            android:layout_toStartOf="@+id/lyBotones"
+            android:text="@string/titulo"
             android:textColor="@color/colorWhite"
             android:textSize="20sp"
             android:textStyle="bold" />
 
         <LinearLayout
+            android:id="@+id/lyBotones"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -30,12 +32,13 @@
             <Button
                 android:id="@+id/btnRef"
                 style="@style/ButtonInfo"
-                android:text="Referencias" />
+                android:background="?selectableItemBackgroundBorderless"
+                android:text="@string/ref" />
 
             <Button
                 android:id="@+id/btnVolver"
                 style="@style/ButtonVolver"
-                android:text="Volver" />
+                android:text="@string/volver" />
 
         </LinearLayout>
 

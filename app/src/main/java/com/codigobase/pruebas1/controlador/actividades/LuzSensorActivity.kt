@@ -1,17 +1,17 @@
-package com.codigobase.pruebas1
+package com.codigobase.pruebas1.controlador.actividades
 
 import android.content.Context
 import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
+import com.codigobase.pruebas1.R
 import kotlinx.android.synthetic.main.activity_luz_sensor.*
 import kotlinx.android.synthetic.main.barra_superior.*
-import java.lang.Exception
 
 class LuzSensorActivity : AppCompatActivity(), SensorEventListener {
 
@@ -26,18 +26,18 @@ class LuzSensorActivity : AppCompatActivity(), SensorEventListener {
 
         // Obtener elementos sensor manager y el sensor de luz
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
-        sensor = sensorManager?.getDefaultSensor(Sensor.TYPE_LIGHT)
+        sensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT)
 
         // Ocultar barra superior, si no da null
         supportActionBar?.hide()
 
         // Definir titulo
-        lblTituloBarra.text = "Sensor de luz"
+        lblTituloBarra.text = getString(R.string.luz)
 
         // Mostrar mensaje de como se usa
         mostrarMensaje(
-            "Instrucciones",
-            "Para esta prueba se usa el sensor de luz, conforme más luz haya, más cargado estará la barra de progreso."
+            getString(R.string.instruc),
+            getString(R.string.ins_luz)
         )
 
         // Cargar los eventos de boton
@@ -48,7 +48,7 @@ class LuzSensorActivity : AppCompatActivity(), SensorEventListener {
         super.onResume()
 
         // Definir la frecuencia con la que quiero que se actualice
-        sensorManager?.registerListener(this, sensor, SensorManager.SENSOR_DELAY_NORMAL)
+        sensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_NORMAL)
     }
 
     override fun onPause() {
@@ -66,7 +66,9 @@ class LuzSensorActivity : AppCompatActivity(), SensorEventListener {
                 mostrarValorLuz(event.values[0])
             }
         } catch (ex: Exception) {
-            Log.e("ERROR", "Fallo con el sensor de la luz.")
+            Log.e(getString(R.string.error), getString(
+                R.string.fallo_luz
+            ))
         }
     }
 
@@ -82,7 +84,7 @@ class LuzSensorActivity : AppCompatActivity(), SensorEventListener {
         var cadena = "$porcentajeLuz%"
         txtTextoPorcentajeLuz.text = cadena
 
-        cadena = "Valor del sensor $cantidadLuz"
+        cadena = getString(R.string.valor_luz) + " $cantidadLuz"
         txtTextoSensorLuz.text = cadena
     }
 
@@ -90,17 +92,17 @@ class LuzSensorActivity : AppCompatActivity(), SensorEventListener {
     private fun eventosBoton() {
         btnRef.setOnClickListener {
             mostrarMensaje(
-                "Información",
-                "Clase: LuzSensorActivity\nLayer: activity_luz_sensor\nManifest: android.hardware.sensor.acelerometer"
+                getString(R.string.info),
+                getString(R.string.ref_luz)
             )
         }
         btnVolver.setOnClickListener { finish() }
     }
 
     private fun mostrarMensaje(titulo: String, mensaje: String) {
-        var cuadroDialogo: AlertDialog.Builder = AlertDialog.Builder(this)
+        val cuadroDialogo: AlertDialog.Builder = AlertDialog.Builder(this)
         cuadroDialogo.setTitle(titulo).setMessage(mensaje)
-        cuadroDialogo.setPositiveButton("Aceptar", null)
+        cuadroDialogo.setPositiveButton(getString(R.string.aceptar), null)
         cuadroDialogo.show()
     }
 
