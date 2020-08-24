@@ -8,10 +8,12 @@ import androidx.fragment.app.Fragment
 import com.codigobase.pruebas1.R
 
 /**
- * Fragmento de UIActivity
+ * Fragmento 1 de UIActivity.
+ * Es llamado desde UIActivity.
  */
 class BotonesUiFragment : Fragment() {
 
+    // ########################### AL CREAR LA VISTA ###########################
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

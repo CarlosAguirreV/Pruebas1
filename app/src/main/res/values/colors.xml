@@ -4,9 +4,11 @@
     <color name="colorPrimaryDark">#B82E2C</color>
     <color name="colorAccent">#85211F</color>
     <color name="colorBotones">#FBA177</color>
+    <color name="colorMarcador">#FBF477</color>
     <color name="colorLightGray">#E3E3E3</color>
     <color name="colorWhite">#FFF</color>
     <color name="colorDark">#202020</color>
+    <color name="colorDarkGray">#686868</color>
     <color name="colorDarkRed">#492020</color>
     <color name="colorRed">#EF2525</color>
     <color name="colorGreen">#00FF19</color>

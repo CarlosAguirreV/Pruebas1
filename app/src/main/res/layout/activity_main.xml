@@ -1,63 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorWhite"
     tools:context=".controlador.actividades.MainActivity">
 
-    <ScrollView
+    <FrameLayout
+        android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/lyOtros">
+        android:layout_above="@+id/navigationView"
+        android:layout_alignParentStart="true" />
 
-        <include
-            android:id="@+id/iMenuElementos"
-            layout="@layout/elementos_menu" />
-
-    </ScrollView>
-
-    <LinearLayout
-        android:id="@+id/lyOtros"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@color/colorLightGray"
-        android:orientation="vertical"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="20dp"
-        android:paddingBottom="10dp">
-
-        <Button
-            android:id="@+id/btnCodigo"
-            style="@style/ButtonLink"
-            android:layout_marginBottom="5dp"
-            android:backgroundTint="@color/colorWhite"
-            android:text="@string/codigo" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/btnAcerca"
-                style="@style/ButtonAcerca"
-                android:layout_marginBottom="2dp"
-                android:backgroundTint="@color/colorWhite"
-                android:text="@string/acerca" />
-
-            <Button
-                android:id="@+id/btnCerrar"
-                style="@style/ButtonExit"
-                android:layout_marginStart="5dp"
-                android:layout_marginBottom="2dp"
-                android:backgroundTint="@color/colorWhite"
-                android:text="@string/cerrar" />
-        </LinearLayout>
-
-
-    </LinearLayout>
+        app:itemBackground="@color/colorLightGray"
+        app:itemIconTint="@color/colorDark"
+        app:itemTextColor="@color/colorDark"
+        app:menu="@menu/menu_principal" />
 
 </RelativeLayout>

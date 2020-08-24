@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".controlador.fragmentos.MenuPrincipalFragment">
+
+    <ScrollView
+        android:id="@+id/scrMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lyBusqueda">
+
+        <include
+            android:id="@+id/iMenuElementos"
+            layout="@layout/elementos_menu" />
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/lyBusqueda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorLightGray"
+        android:orientation="horizontal"
+        android:padding="7dp">
+
+        <TextView
+            style="@style/TextoLectura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="3dp"
+            android:text="@string/irA"
+            app:drawableStartCompat="@drawable/ic_baseline" />
+
+        <Spinner
+            android:id="@+id/spnIr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/btn_forma"
+            android:backgroundTint="@color/colorWhite"
+            android:entries="@array/marcadores"
+            android:padding="7dp" />
+    </LinearLayout>
+
+</RelativeLayout>

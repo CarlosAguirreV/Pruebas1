@@ -4,22 +4,22 @@ import android.content.Context
 import android.media.AudioAttributes
 import android.media.SoundPool
 import com.codigobase.pruebas1.R
+import com.codigobase.pruebas1.modelo.GuardarCargar
 
 /**
  * Esta clase controla los sonidos cortos. Quita redundancia de codigo.
- * IMPORTANTE El audio esta por defecto deshabilitado, para habilitarlo usa el metodo setActivo().
+ * IMPORTANTE Para que suene el audio el valor GuardarCargar.datos.efectosSonido ha de estar a true.
  * IMPORTANTE 2 En onDestroy() llama al metodo liberar memoria. SoundPool carga los audios cortos en la RAM.
- * Los sonidos se guardan en el paquete "raw" dentro de "resources".
+ * IMPORTANTE 3 Para cargar cualquier sonido tan solo pasale su ID el cual puedes obtener desde Constantes.SND_
  */
 class ControlSonidos(contexto: Context) {
 
-    // ################ CAMPOS ################
+    // ########################### CAMPOS ###########################
     private val soundPool: SoundPool
     private val coleccionAudios: IntArray
-    private var habilitado: Boolean = false
 
 
-    // ################ AL INICIAR ################
+    // ########################### AL INICIAR ###########################
     /** Inicializa los elementos para poder usarlos */
     init {
         // Crear los atributos del SoundPool
@@ -33,24 +33,15 @@ class ControlSonidos(contexto: Context) {
 
         // Crear y llenar la coleccion de sonidos para poder reproducirlos posteriormente
         coleccionAudios = intArrayOf(
-            soundPool.load(contexto,
-                R.raw.snd_seleccion, 1),
             soundPool.load(contexto, R.raw.snd_borrar, 1),
-            soundPool.load(contexto,
-                R.raw.snd_interruptor, 1)
+            soundPool.load(contexto, R.raw.snd_interruptor, 1),
+            soundPool.load(contexto, R.raw.snd_tic, 1),
+            soundPool.load(contexto, R.raw.snd_maleta, 1)
         )
     }
 
 
-    // ################ METODOS ################
-    /**
-     * Permite definir si esta activa o no la reproduccion de audio.
-     * Por defecto esta desactivado.
-     */
-    fun setActivo(activarAudio: Boolean) {
-        habilitado = activarAudio
-    }
-
+    // ########################### METODOS ###########################
     /**
      * Permite ejecutar un audio corto, para ello hay que especificar el indice del audio, este se
      * puede obtener poniendo "Constantes.sonidoNombreSonido".
@@ -59,7 +50,7 @@ class ControlSonidos(contexto: Context) {
      */
     fun playAudio(indiceAudio: Int, audioLeft: Float = 1f, audioRight: Float = 1f) {
         // Toca el sonido especificado (por el ID de las Constantes), solo si existe y si esta habilitada la musica
-        if (indiceAudio < coleccionAudios.size && habilitado) {
+        if (indiceAudio < coleccionAudios.size && GuardarCargar.datos.efectosSonido) {
 
             soundPool.play(
                 coleccionAudios[indiceAudio],

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Pruebas1</string>
 
-    <!-- Separadores -->
+    <!-- Separadores y marcadores -->
     <string name="sensores">Sensores</string>
     <string name="ig">Interfaz gráfica</string>
     <string name="hilosCorrutinas">Hilos y corrutinas</string>
@@ -9,9 +9,21 @@
     <string name="bd">Bases de datos y datos</string>
     <string name="elementosExternos">Elementos externos</string>
 
+    <string-array name="marcadores">
+        <item>Nada</item>
+        <item>Sensores</item>
+        <item>Interfaz gráfica</item>
+        <item>Hilos y corrutinas</item>
+        <item>Multimedia</item>
+        <item>Bases de datos y datos</item>
+        <item>Elementos externos</item>
+    </string-array>
+
     <!-- Barra inferior menu -->
+    <string name="menu">Menu</string>
     <string name="codigo">Código</string>
     <string name="acerca">Acerca</string>
+    <string name="opciones">Opciones</string>
     <string name="cerrar">Cerrar</string>
 
     <!-- Barra superior -->
@@ -26,6 +38,8 @@
     <string name="error">ERROR</string>
     <string name="aceptar">Aceptar</string>
     <string name="fin">Fin</string>
+    <string name="irA">Ir hasta</string>
+    <string name="logo">Logotipo</string>
 
     <!-- Explicaciones -->
     <string name="info">Información</string>
@@ -41,7 +55,7 @@
     <!-- LuzSensor -->
     <string name="sensor_luz">Sensor de luz - SensorEventListener</string>
     <string name="luz">Sensor de luz</string>
-    <string name="ins_luz">Para esta prueba se usa el sensor de luz, conforme más luz haya, más cargado estará la barra de progreso.</string>
+    <string name="ins_luz">Para esta prueba se usa el sensor de luz, conforme más luz haya, más cargada estará la barra de progreso.</string>
     <string name="ref_luz">Clase: LuzSensorActivity\nLayer: activity_luz_sensor\nManifest: android.hardware.sensor.acelerometer</string>
     <string name="valor_luz">Valor del sensor</string>
     <string name="fallo_luz">Fallo con el sensor de la luz.</string>
@@ -51,6 +65,9 @@
     <string name="elementos_ui">Elementos UI - res/drawable</string>
     <string name="ins_ui">"A continuación se muestran varios elementos de la interfaz de usuario (UI).</string>
     <string name="ref_ui">Clase: UiActivity\nLayer: activity_ui</string>
+    <string name="has_pulsado_btn">Has pulsado el boton</string>
+    <string name="titulo_cuadro">Cuadro de diálogo</string>
+    <string name="mensaje_cuadro">Este es el mensaje del cuadro de dialogo</string>
 
     <string name="animaciones">Animaciones</string>
 
@@ -71,7 +88,14 @@
 
     <string name="publicidad">Uso de publicidad</string>
 
+
     <!-- Acerca de -->
-    <string name="acercaDe">Esta aplicación ha sido creada con fines didácticos, a fin de aprender y transmitir lo aprendido.\n\nAplicación creada por Carlos Aguirre\n\nTambién doy las gracias a\n - Jorgesys (Stack Overflow)</string>
+    <string name="acercaDe">Esta aplicación ha sido creada con fines didácticos, a fin de aprender y transmitir lo aprendido.\n\nDatos técnicos\n - Versión de Android Studio 4.0.1\n - Versión de Kotlin 1.3.72\n - API 23 \n\nAplicación creada por Carlos Aguirre\n\nTambién doy las gracias a\n - Jorgesys (Stack Overflow)</string>
+
+    <!-- Fragmento Opciones -->
+    <string name="efectos">Efectos de sonido</string>
+    <string name="restablecer">Restablecer</string>
+    <string name="guardadoCorrectamente">Datos guardados correctamente</string>
+    <string name="guardadoFallido">Ocurrió un fallo al guardar</string>
 
 </resources>

@@ -13,9 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".controlador.actividades.AcercaDeActivity"></activity>
         <activity
-            android:name=".controlador.Corrutinas"
+            android:name=".controlador.actividades.CorrutinasActivity"
             android:configChanges="screenSize|orientation" />
         <activity
             android:name=".controlador.actividades.UiActivity"
@@ -28,6 +27,7 @@
             android:screenOrientation="fullSensor" />
         <activity
             android:name=".controlador.actividades.MainActivity"
+            android:configChanges="screenSize|orientation"
             android:screenOrientation="fullSensor"
             android:theme="@style/SplashTheme">
             <intent-filter>

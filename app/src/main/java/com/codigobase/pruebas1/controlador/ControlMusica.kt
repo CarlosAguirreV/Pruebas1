@@ -11,12 +11,12 @@ import android.media.MediaPlayer
  */
 class ControlMusica(contexto: Context, idRecursoMusica: Int) {
 
-    // ################ CAMPOS ################
+    // ########################### CAMPOS ###########################
     private val mediaPlayer: MediaPlayer = MediaPlayer.create(contexto, idRecursoMusica)
     private var habilitado: Boolean = false
 
 
-    // ################ AL INICIAR ################
+    // ########################### AL INICIAR ###########################
     /** Inicializa los elementos para poder usarlos */
     init {
         mediaPlayer.isLooping = true
@@ -24,7 +24,7 @@ class ControlMusica(contexto: Context, idRecursoMusica: Int) {
     }
 
 
-    // ################ METODOS ################
+    // ########################### METODOS ###########################
     /**
      * Permite definir si esta activa o no la reproduccion de musica.
      * Por defecto esta desactivado.

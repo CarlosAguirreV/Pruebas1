@@ -1,4 +1,4 @@
-package com.codigobase.pruebas1.controlador
+package com.codigobase.pruebas1.controlador.actividades
 
 import android.os.Bundle
 import android.view.View
@@ -20,11 +20,14 @@ import kotlinx.coroutines.withContext
  * Documentacion: https://codelabs.developers.google.com/codelabs/kotlin-coroutines/#0
  * Video: https://www.youtube.com/watch?v=F63mhZk-1-Y
  */
-class Corrutinas : AppCompatActivity() {
+class CorrutinasActivity : AppCompatActivity() {
 
+    // ########################### CAMPOS ###########################
     private var pulsacionesBoton = 0
-    private lateinit var toastActual: Toast
+    private var toastActual: Toast? = null
 
+
+    // ########################### METODO ON CREATE ###########################
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_corrutinas)
@@ -41,19 +44,20 @@ class Corrutinas : AppCompatActivity() {
             getString(R.string.ins_corrutinas)
         )
 
-        // Crear un toast vacio para poder cancelarlo en caso de que se creen varios a la vez
-        toastActual = Toast.makeText(this, "", Toast.LENGTH_SHORT)
-
         // Cargar los eventos de boton
         eventosBoton()
     }
 
+
+    // ########################### METODO ON DESTROY ###########################
     override fun onDestroy() {
         super.onDestroy()
-        toastActual.cancel()
+        toastActual?.cancel()
     }
 
-    // Otros metodos
+
+    // ########################### METODOS ###########################
+    /** Lo que sucedera al pulsar algun boton. */
     private fun eventosBoton() {
         btnRef.setOnClickListener {
             mostrarMensaje(
@@ -72,6 +76,23 @@ class Corrutinas : AppCompatActivity() {
         btnToast.setOnClickListener { mostrarToast(getString(R.string.mensajeCorrutinas) + " ${++pulsacionesBoton}") }
     }
 
+    /** Muestra un mensaje con informacion. */
+    private fun mostrarMensaje(titulo: String, mensaje: String) {
+        val cuadroDialogo: AlertDialog.Builder = AlertDialog.Builder(this)
+        cuadroDialogo.setTitle(titulo).setMessage(mensaje)
+        cuadroDialogo.setPositiveButton(getString(R.string.aceptar), null)
+        cuadroDialogo.show()
+    }
+
+    /** Muestra un toast con la cadena pasada por parametro. */
+    private fun mostrarToast(mensaje: String) {
+        toastActual?.cancel()
+        toastActual = Toast.makeText(this, mensaje, Toast.LENGTH_SHORT)
+        toastActual?.show()
+    }
+
+
+    // ########################### METODOS CORRUTINA ###########################
     /** Corrutina - Metodo que trabajan en paralelo */
     private suspend fun iniciarCuentaAtras() {
         mostrarBoton(false)
@@ -93,6 +114,7 @@ class Corrutinas : AppCompatActivity() {
         }
     }
 
+    /** Metodo que muestra u oculta el boton de la cuenta atras. */
     private suspend fun mostrarBoton(mostrar: Boolean) {
         withContext(Main) {
             if (mostrar) {
@@ -104,20 +126,5 @@ class Corrutinas : AppCompatActivity() {
             }
         }
     }
-
-    /** Metodo que muestra un mensaje */
-    private fun mostrarMensaje(titulo: String, mensaje: String) {
-        val cuadroDialogo: AlertDialog.Builder = AlertDialog.Builder(this)
-        cuadroDialogo.setTitle(titulo).setMessage(mensaje)
-        cuadroDialogo.setPositiveButton(getString(R.string.aceptar), null)
-        cuadroDialogo.show()
-    }
-
-    private fun mostrarToast(mensaje: String) {
-        toastActual.cancel()
-        toastActual = Toast.makeText(this, mensaje, Toast.LENGTH_SHORT)
-        toastActual.show()
-    }
-
 
 }
