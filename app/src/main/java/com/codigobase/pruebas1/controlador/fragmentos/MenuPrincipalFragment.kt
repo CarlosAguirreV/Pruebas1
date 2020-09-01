@@ -1,5 +1,6 @@
 package com.codigobase.pruebas1.controlador.fragmentos
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,11 +13,9 @@ import androidx.fragment.app.Fragment
 import com.blogspot.atifsoftwares.animatoolib.Animatoo
 import com.codigobase.pruebas1.R
 import com.codigobase.pruebas1.controlador.ControlSonidos
-import com.codigobase.pruebas1.controlador.actividades.CorrutinasActivity
-import com.codigobase.pruebas1.controlador.actividades.FantasmaActivity
-import com.codigobase.pruebas1.controlador.actividades.LuzSensorActivity
-import com.codigobase.pruebas1.controlador.actividades.UiActivity
+import com.codigobase.pruebas1.controlador.actividades.*
 import com.codigobase.pruebas1.modelo.Constantes
+import com.codigobase.pruebas1.modelo.GuardarCargar
 import kotlinx.android.synthetic.main.elementos_menu.view.*
 import kotlinx.android.synthetic.main.fragment_menu_principal.view.*
 
@@ -115,6 +114,9 @@ class MenuPrincipalFragment : Fragment() {
         root.btnLuzSensor.setOnClickListener { showActividad(LuzSensorActivity::class.java) }
         root.btnUI.setOnClickListener { showActividad(UiActivity::class.java) }
         root.btnCorrutinas.setOnClickListener { showActividad(CorrutinasActivity::class.java) }
+        root.btnSndMsc.setOnClickListener { showActividad(SonidosMusicaActivity::class.java) }
+        root.btnGuardarCargar.setOnClickListener { showActividad(DatosActivity::class.java) }
+        root.btnBd.setOnClickListener { showActividad(BdActivity::class.java) }
     }
 
     private fun showActividad(clase: Class<*>) {

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controlador.actividades.SonidosMusicaActivity">
+
+    <include
+        android:id="@+id/iBarraSuperior"
+        layout="@layout/barra_superior" />
+
+    <TextView
+        android:id="@+id/mensajeAlerta"
+        style="@style/MensajeAlerta"
+        android:layout_below="@+id/iBarraSuperior"
+        android:text="@string/advertencia_efectos" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/mensajeAlerta">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lyEfectos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/desc_play"
+                    android:src="@drawable/ic_play" />
+
+                <TextView
+                    style="@style/TextoLectura"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:padding="10dp"
+                    android:text="@string/efectos" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyMusica"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/desc_play"
+                    android:src="@drawable/ic_play" />
+
+                <TextView
+                    style="@style/TextoLectura"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:padding="10dp"
+                    android:text="@string/musica" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lblVolumen"
+                style="@style/TextoLectura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/volumen" />
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:padding="10dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

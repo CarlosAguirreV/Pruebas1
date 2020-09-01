@@ -73,16 +73,14 @@
         android:text="@string/bd" />
 
     <Button
-        android:id="@+id/btnBd"
-        style="@style/ButtonNormal"
-        android:backgroundTint="@color/colorDarkGray"
-        android:text="@string/bdConRoom" />
-
-    <Button
         android:id="@+id/btnGuardarCargar"
         style="@style/ButtonNormal"
-        android:backgroundTint="@color/colorDarkGray"
         android:text="@string/guardarCargar" />
+
+    <Button
+        android:id="@+id/btnBd"
+        style="@style/ButtonNormal"
+        android:text="@string/bdConRoom" />
 
     <TextView
         android:id="@+id/mExternos"

@@ -89,6 +89,12 @@
     <string name="publicidad">Uso de publicidad</string>
 
 
+    <!-- Sonidos y musica -->
+    <string name="advertencia_efectos">Los efectos de sonido estan deshabilitados, ve a opciones de la aplicación y actívalos.</string>
+    <string name="desc_play">Boton reproduccir.</string>
+    <string name="musica">Musica</string>
+    <string name="volumen">Volumen</string>
+
     <!-- Acerca de -->
     <string name="acercaDe">Esta aplicación ha sido creada con fines didácticos, a fin de aprender y transmitir lo aprendido.\n\nDatos técnicos\n - Versión de Android Studio 4.0.1\n - Versión de Kotlin 1.3.72\n - API 23 \n\nAplicación creada por Carlos Aguirre\n\nTambién doy las gracias a\n - Jorgesys (Stack Overflow)</string>
 
