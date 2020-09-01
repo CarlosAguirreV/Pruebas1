@@ -2,7 +2,13 @@ package com.codigobase.pruebas1.modelo
 
 import androidx.room.*
 
-@Entity
+@Entity(
+    foreignKeys = [ForeignKey(
+        entity = Depart::class,
+        parentColumns = ["id_depart"],
+        childColumns = ["depart_id"]
+    )]
+)
 data class Emple(
     @PrimaryKey var id_emple: Int,
     @ColumnInfo(name = "nombre_emple") var nombre_emple: String,

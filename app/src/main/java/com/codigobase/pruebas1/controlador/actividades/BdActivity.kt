@@ -22,12 +22,20 @@ class BdActivity : AppCompatActivity() {
         bdEmpleDepart = BD_emple_depart.getInstancia(this)
 
         try {
-            val coleccionDepartamentos = bdEmpleDepart.departDao().getDepartamentos()
-
             var cadena = ""
+
+            // Departamentos
+            val coleccionDepartamentos = bdEmpleDepart.departDao().getDepartamentos()
             for (departamento in coleccionDepartamentos) {
                 cadena += departamento.toString() + "\n\n"
             }
+
+            // Empleados
+            val coleccionEmpleados = bdEmpleDepart.empleDao().getEmpleados()
+            for (empleado in coleccionEmpleados) {
+                cadena += empleado.toString() + "\n\n"
+            }
+
 
             txtDatos.text = cadena
 
