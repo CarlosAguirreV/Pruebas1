@@ -32,19 +32,19 @@ class CorrutinasActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_corrutinas)
 
-        // Ocultar barra superior, si no da null
+        // Ocultar barra superior, si no da null.
         super.getSupportActionBar()?.hide()
 
-        // Definir titulo
+        // Definir titulo.
         lblTituloBarra.text = getString(R.string.corrutinas)
 
-        // Mostrar mensaje de como se usa
+        // Mostrar mensaje de como se usa.
         mostrarMensaje(
             getString(R.string.instruc),
             getString(R.string.ins_corrutinas)
         )
 
-        // Cargar los eventos de boton
+        // Cargar los eventos de boton.
         eventosBoton()
     }
 

@@ -79,7 +79,7 @@ class MenuPrincipalFragment : Fragment() {
     // ########################### METODOS ###########################
     /** Lo que sucedera al pulsar algun boton. */
     private fun eventosDeBoton() {
-        // Al seleccionar algun elemento del spinner
+        // Al seleccionar algun elemento del spinner.
         root.spnIr?.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {}
 
@@ -89,19 +89,19 @@ class MenuPrincipalFragment : Fragment() {
                 position: Int,
                 id: Long
             ) {
-                // Quitar el fondo a todos los marcadores
+                // Quitar el fondo a todos los marcadores.
                 for (marcador in coleccionMarcadores) {
                     marcador.background = null
                 }
 
-                // Si se ha seleccionado algo
+                // Si se ha seleccionado algo.
                 if (position != 0) {
                     controlSonidos.playAudio(Constantes.SND_TIC)
 
-                    // Dirigir el scrollbar al marcador seleccionado
+                    // Dirigir el scrollbar al marcador seleccionado.
                     root.scrMenu?.scrollTo(0, coleccionMarcadores[position - 1].top)
 
-                    // Cambiar el color del marcador seleccionado
+                    // Cambiar el color del marcador seleccionado.
                     coleccionMarcadores[position - 1].background =
                         ContextCompat.getDrawable(root.context, R.color.colorMarcador)
                 }

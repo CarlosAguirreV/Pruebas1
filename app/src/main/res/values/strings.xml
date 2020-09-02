@@ -84,7 +84,19 @@
 
     <string name="sonidoMusica">Sonidos y música</string>
 
+    <!-- Base de datos con ROOM -->
     <string name="bdConRoom">Base de datos con ROOM</string>
+    <string name="ref_bd">Clase: BDActivity\nLayer: activity_bd\n\nClases modelo:\n - Emple\n - Depart\n\nClase controladora de la BD:\nBD_emple_depart\n\nBD precargada:\nassets/bd/emple_depart.bd</string>
+    <string name="ins_bd">Para este ejemplo se parte de una BD prepoblada la cual puedes modificar a tu antojo. Se trata de dos tablas, es sencillo, por un lado los empleados y por otra los departamentos. Un empleado solo puede estar en un departamento y en un departamento puede haber varios empleados.\n\nPuedes hacer varias cosas con la BD.\n - La primera consultar. Puedes seleccionar un departamento y acto seguido se mostraran los empleados asociados a ella.\n\n - La segunda puedes insertar un nuevo empleado siempre y cuando el nombre del empleado no exista, selecciona el departamento al que quieras que pertenezca y pulsa insertar.\n\n - La tercera puedes eliminar el empleado escribiendo su nombre o bien seleccionandolo de la lista y haciendo clic en Eliminar.</string>
+
+    <string name="nombre_emple">Nombre del empleado</string>
+    <string name="anonimo">Anonimo</string>
+    <string name="insertar">Insertar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="departamento">Selecciona un departamento</string>
+    <string name="esta_vacio">El campo de texto esta vacio.</string>
+    <string name="existe_emple">Ya existe un empleado con ese nombre, usa otro.</string>
+    <string name="no_existe_emple">Ese empleado no existe.</string>
 
     <string name="guardarCargar">Guardar y cargar datos en la APP</string>
 

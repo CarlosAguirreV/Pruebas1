@@ -5,11 +5,85 @@
     android:layout_height="match_parent"
     tools:context=".controlador.actividades.BdActivity">
 
-    <TextView
-        android:id="@+id/txtDatos"
-        style="@style/TextoLectura"
+    <include
+        android:id="@+id/iBarraSuperior"
+        layout="@layout/barra_superior" />
+
+    <ScrollView
+        android:id="@+id/scrView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/iBarraSuperior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <EditText
+                android:id="@+id/txtNombreEmple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/anonimo"
+                android:drawableStart="@drawable/ic_create"
+                android:drawablePadding="5dp"
+                android:hint="@string/nombre_emple"
+                android:padding="15dp" />
+
+            <LinearLayout
+                android:id="@+id/lySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtNombreEmple">
+
+                <TextView
+                    style="@style/TextoLectura"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:padding="10dp"
+                    android:text="@string/departamento" />
+
+                <Spinner
+                    android:id="@+id/spnDepartamento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyInserElim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lySpinner"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnInsertar"
+                    style="@style/ButtonBasic"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_add"
+                    android:text="@string/insertar" />
+
+                <Button
+                    android:id="@+id/btnEliminar"
+                    style="@style/ButtonBasic"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_delete"
+                    android:text="@string/eliminar" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ListView
+        android:id="@+id/listEmpleados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scrView"
         android:padding="10dp" />
 
 </RelativeLayout>

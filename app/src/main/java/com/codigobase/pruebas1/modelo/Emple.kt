@@ -18,9 +18,6 @@ data class Emple(
     @ColumnInfo var depart_id: Int
 ) {
     override fun toString(): String {
-        return "Emple:\n" +
-                " - id_emple $id_emple\n" +
-                " - nombre_emple $nombre_emple\n" +
-                " - depart_id $depart_id"
+        return "$id_emple $nombre_emple"
     }
 }
