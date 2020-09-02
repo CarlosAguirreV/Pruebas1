@@ -102,7 +102,7 @@ class BdActivity : AppCompatActivity() {
 
     /** Inserta un nuevo empleado. */
     private fun insertar() {
-        if (txtNombreEmple.text.toString().trim().isNotEmpty()) {
+        if (getCadenaIntroducida().isNotEmpty()) {
             if (existeEmple()) {
                 mostrarToast(getString(R.string.existe_emple))
             } else {
@@ -115,7 +115,7 @@ class BdActivity : AppCompatActivity() {
 
                 // Realizar la insercion en la BD.
                 bdEmpleDepart.empleDao()
-                    .addEmple(Emple(idNuevo, txtNombreEmple.text.toString(), idDepart))
+                    .addEmple(Emple(idNuevo, getCadenaIntroducida(), idDepart))
 
                 // Consultar de nuevo los empleados y refrescar la lista.
                 consultar()
@@ -127,7 +127,7 @@ class BdActivity : AppCompatActivity() {
 
     /** Elimina el empleado que tenga el nombre especificado en el TextView. */
     private fun eliminar() {
-        val emple = bdEmpleDepart.empleDao().getEmplePorNombre(txtNombreEmple.text.toString())
+        val emple = bdEmpleDepart.empleDao().getEmplePorNombre(getCadenaIntroducida())
         if (emple == null) {
             mostrarToast(getString(R.string.no_existe_emple))
         } else {
@@ -173,7 +173,7 @@ class BdActivity : AppCompatActivity() {
 
     /** Comprueba si existe el empleado cuyo nombre esta en el TextView. */
     private fun existeEmple(): Boolean {
-        val empleado = bdEmpleDepart.empleDao().getEmplePorNombre(txtNombreEmple.text.toString())
+        val empleado = bdEmpleDepart.empleDao().getEmplePorNombre(getCadenaIntroducida())
         return empleado != null
     }
 
@@ -188,6 +188,13 @@ class BdActivity : AppCompatActivity() {
         cuadroDialogo.setTitle(titulo).setMessage(mensaje)
         cuadroDialogo.setPositiveButton("Aceptar", null)
         cuadroDialogo.show()
+    }
+
+    /** Obtiene la cadena introducida en el EditText sin espacios ni saltos de linea. */
+    private fun getCadenaIntroducida(): String {
+        val cadena = txtNombreEmple.text.toString().trim()
+        val cadenaFinal = cadena.replace("\n", "")
+        return cadenaFinal
     }
 
 }

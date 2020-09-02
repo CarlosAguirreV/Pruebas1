@@ -27,6 +27,8 @@
                 android:drawableStart="@drawable/ic_create"
                 android:drawablePadding="5dp"
                 android:hint="@string/nombre_emple"
+                android:maxLines="2"
+                android:minLines="1"
                 android:padding="15dp" />
 
             <LinearLayout
