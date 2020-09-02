@@ -39,6 +39,12 @@
         android:text="@string/elementos_ui" />
 
     <Button
+        android:id="@+id/btnGraficas"
+        style="@style/ButtonNormal"
+        android:backgroundTint="@color/colorDarkGray"
+        android:text="@string/graficas" />
+
+    <Button
         android:id="@+id/btnAnimaciones"
         style="@style/ButtonNormal"
         android:backgroundTint="@color/colorDarkGray"

@@ -59,7 +59,7 @@ class CorrutinasActivity : AppCompatActivity() {
     // ########################### METODOS ###########################
     /** Lo que sucedera al pulsar algun boton. */
     private fun eventosBoton() {
-        btnRef.setOnClickListener {
+        btnInfo.setOnClickListener {
             mostrarMensaje(
                 getString(R.string.info),
                 getString(R.string.ref_corrutinas)

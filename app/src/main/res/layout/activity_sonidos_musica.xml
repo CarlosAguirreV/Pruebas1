@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,9 +13,27 @@
         android:id="@+id/mensajeAlerta"
         style="@style/MensajeAlerta"
         android:layout_below="@+id/iBarraSuperior"
-        android:text="@string/advertencia_efectos" />
+        android:text="@string/advertencia_efectos"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/lyAviso"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mensajeAlerta"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:padding="50dp"
+            android:src="@drawable/ic_volume_off" />
+
+    </FrameLayout>
 
     <ScrollView
+        android:id="@+id/lyScrollMusica"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/mensajeAlerta">
@@ -35,6 +52,7 @@
                 android:padding="10dp">
 
                 <ImageButton
+                    android:id="@+id/btnPlaySonido"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -58,6 +76,7 @@
                 android:padding="10dp">
 
                 <ImageButton
+                    android:id="@+id/btnPlayMusica"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -74,14 +93,30 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/lblVolumen"
+                android:id="@+id/lblVolumenIzq"
                 style="@style/TextoLectura"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="@string/volumen" />
+                android:text="@string/volumenIzq" />
 
             <SeekBar
+                android:id="@+id/sbVolIzq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/lblVolumenDcho"
+                style="@style/TextoLectura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/volumenDcho" />
+
+            <SeekBar
+                android:id="@+id/sbVolDcho"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:max="100"

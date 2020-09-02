@@ -2,6 +2,7 @@ package com.codigobase.pruebas1.controlador
 
 import android.content.Context
 import android.media.MediaPlayer
+import com.codigobase.pruebas1.modelo.GuardarCargar
 
 /**
  * Esta clase controla los audios mas largos (musica). Quita redundancia de codigo.
@@ -13,7 +14,6 @@ class ControlMusica(contexto: Context, idRecursoMusica: Int) {
 
     // ########################### CAMPOS ###########################
     private val mediaPlayer: MediaPlayer = MediaPlayer.create(contexto, idRecursoMusica)
-    private var habilitado: Boolean = false
 
 
     // ########################### AL INICIAR ###########################
@@ -25,17 +25,9 @@ class ControlMusica(contexto: Context, idRecursoMusica: Int) {
 
 
     // ########################### METODOS ###########################
-    /**
-     * Permite definir si esta activa o no la reproduccion de musica.
-     * Por defecto esta desactivado.
-     */
-    fun setActivo(activarAudio: Boolean) {
-        habilitado = activarAudio
-    }
-
     /** Reproduce la musica. */
     fun play() {
-        if (habilitado) {
+        if (GuardarCargar.datos.efectosSonido) {
             mediaPlayer.start()
         }
     }
@@ -56,6 +48,20 @@ class ControlMusica(contexto: Context, idRecursoMusica: Int) {
             mediaPlayer.stop()
         }
         mediaPlayer.release()
+    }
+
+    /**
+     * Indica si se esta ejecutando o no.
+     */
+    fun isPlaying(): Boolean {
+        return mediaPlayer.isPlaying
+    }
+
+    /**
+     * Controla el volumen de los dos canales (izq y dcho) de la musica.
+     */
+    fun controlVolumen(audioLeft: Float = 1f, audioRight: Float = 1f) {
+        mediaPlayer.setVolume(audioLeft, audioRight)
     }
 
 }

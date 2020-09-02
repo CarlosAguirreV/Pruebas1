@@ -47,9 +47,9 @@ class UiActivity : AppCompatActivity() {
     private fun eventosBoton() {
         btnVolver.setOnClickListener { finish() }
 
-        btnRef.setOnClickListener {
+        btnInfo.setOnClickListener {
             mostrarMensaje(
-                getString(R.string.ref),
+                getString(R.string.info),
                 getString(R.string.ref_ui)
             )
         }

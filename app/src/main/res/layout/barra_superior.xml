@@ -30,10 +30,10 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btnRef"
+                android:id="@+id/btnInfo"
                 style="@style/ButtonInfo"
                 android:background="?selectableItemBackgroundBorderless"
-                android:text="@string/ref" />
+                android:text="@string/info2" />
 
             <Button
                 android:id="@+id/btnVolver"

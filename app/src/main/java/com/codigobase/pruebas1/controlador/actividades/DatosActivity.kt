@@ -1,7 +1,7 @@
 package com.codigobase.pruebas1.controlador.actividades
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.codigobase.pruebas1.R
 
 class DatosActivity : AppCompatActivity() {

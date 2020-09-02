@@ -1,6 +1,5 @@
 package com.codigobase.pruebas1.controlador.fragmentos
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -15,7 +14,6 @@ import com.codigobase.pruebas1.R
 import com.codigobase.pruebas1.controlador.ControlSonidos
 import com.codigobase.pruebas1.controlador.actividades.*
 import com.codigobase.pruebas1.modelo.Constantes
-import com.codigobase.pruebas1.modelo.GuardarCargar
 import kotlinx.android.synthetic.main.elementos_menu.view.*
 import kotlinx.android.synthetic.main.fragment_menu_principal.view.*
 

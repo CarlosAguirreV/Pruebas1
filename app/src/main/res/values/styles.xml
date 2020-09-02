@@ -51,7 +51,8 @@
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:drawableStart">@drawable/ic_code</item>
+        <item name="android:drawableTint">@color/colorWhite</item>
+        <item name="android:drawableStart">@drawable/ic_info</item>
     </style>
 
     <style name="ButtonNormal" parent="ButtonTheme">
