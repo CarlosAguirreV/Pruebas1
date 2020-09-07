@@ -102,4 +102,5 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(paginaWeb))
         startActivity(intent)
     }
+
 }

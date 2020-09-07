@@ -98,7 +98,18 @@
     <string name="existe_emple">Ya existe un empleado con ese nombre, usa otro.</string>
     <string name="no_existe_emple">Ese empleado no existe.</string>
 
-    <string name="guardarCargar">Guardar y cargar datos en la APP</string>
+    <!-- Datos (guardar y cargar) -->
+    <string name="guardarCargar">Guardar y cargar datos</string>
+    <string name="ins_guarda_carga">"En este ejemplo podrás guardar y cargar dos valores, el primero es un booleano que como bien sabrás solo puede tomar dos valores true o false, el segundo es un valor entero el cual está limitado a 100 y que podrás controlar mediante la barra de desplazamiento o SeekBar.\n\nCuando pulses 'Guardar' se almacenarán los valores en la memoria interna y cuando pulses 'Cargar' obtendra esos valores de la memoria y los mostrará.\n\nSi sales y vuelves a entrar de la actividad o bien cierras la aplicación, verás que si guardaste los datos aún permaneceran ahí.</string>
+    <string name="ref_guarda_carga">Clase: DatosActivity\nLayer: activity_datos\n\nClases modelo: GuardarCargar, DatosGuardado</string>
+    <string name="op1">Opcion 1 - Boolean (true/false)</string>
+    <string name="op2">Opcion 2 - Int (número entero)</string>
+    <string name="guardar">Guardar</string>
+    <string name="cargar">Cargar</string>
+    <string name="datosGuardados">Datos guardados correctamente.</string>
+    <string name="errorAlGuardar">Ocurrio un fallo al guardar.</string>
+    <string name="datosCargados">Datos cargados correctamente.</string>
+    <string name="errorAlCargar">Ocurrio un fallo al cargar. Se cargaron los datos por defecto.</string>
 
     <string name="publicidad">Uso de publicidad</string>
 

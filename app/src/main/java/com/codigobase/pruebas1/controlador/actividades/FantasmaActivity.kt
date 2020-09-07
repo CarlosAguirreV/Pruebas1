@@ -32,6 +32,9 @@ class FantasmaActivity : AppCompatActivity(), View.OnTouchListener {
         // Ocultar barra superior, si no da null.
         supportActionBar?.hide()
 
+        // Definir titulo.
+        lblTituloBarra.text = getString(R.string.fantasma)
+
         // Crear elementos.
         coordenadasVela = Point()
         coordenadasFantasma = Point()
@@ -42,9 +45,6 @@ class FantasmaActivity : AppCompatActivity(), View.OnTouchListener {
 
         // Definir el listener de toques al elemento de la GUI que hara de sensor.
         sensorToques.setOnTouchListener(this)
-
-        // Definir titulo.
-        lblTituloBarra.text = getString(R.string.fantasma)
 
         // Mostrar mensaje de como se usa.
         mostrarMensaje(
@@ -60,7 +60,9 @@ class FantasmaActivity : AppCompatActivity(), View.OnTouchListener {
     // ########################### AL TOCAR LA PANTALLA ###########################
     override fun onTouch(v: View?, event: MotionEvent?): Boolean {
         // Si el area no tiene valor hay que obtenerlo antes de nada.
-        if(areaMovimiento.x == 0){ refrescarAreaMovimiento() }
+        if (areaMovimiento.x == 0) {
+            refrescarAreaMovimiento()
+        }
 
         if (v?.id == sensorToques.id) {
             // Obtener los valores X e Y del punto tocado en la pantalla.
@@ -73,6 +75,9 @@ class FantasmaActivity : AppCompatActivity(), View.OnTouchListener {
                 posicionarVela(valorX.toInt(), valorY.toInt())
                 alejarFantasma()
             }
+
+            // Finalmente hay que llamar a este metodo, de momento asi lo requiere.
+            v.performClick()
         }
         return true
     }
@@ -144,7 +149,8 @@ class FantasmaActivity : AppCompatActivity(), View.OnTouchListener {
     private fun mostrarMensaje(titulo: String, mensaje: String) {
         val cuadroDialogo: AlertDialog.Builder = AlertDialog.Builder(this)
         cuadroDialogo.setTitle(titulo).setMessage(mensaje)
-        cuadroDialogo.setPositiveButton("Aceptar", null)
+        cuadroDialogo.setPositiveButton(getString(R.string.aceptar), null)
         cuadroDialogo.show()
     }
+
 }

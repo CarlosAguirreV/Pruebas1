@@ -125,5 +125,4 @@ class LuzSensorActivity : AppCompatActivity(), SensorEventListener {
         cuadroDialogo.show()
     }
 
-
 }

@@ -8,5 +8,5 @@ data class DatosGuardado(
 
     // De la actividad DatosGuardadoActivity
     var opcion1: Boolean,
-    var valor: Int
+    var opcion2: Int
 ) : Serializable

@@ -80,6 +80,7 @@ class UiActivity : AppCompatActivity() {
         cuadroDialogo.setPositiveButton(getString(R.string.aceptar), null)
         cuadroDialogo.show()
     }
+
 }
 
 

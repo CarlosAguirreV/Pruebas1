@@ -44,19 +44,25 @@ class GuardarCargar(ruta: File) {
      * Carga los datos y los almacena en la variable datos.
      * Si no encuentra nada, guarda datos nuevos.
      */
-    fun cargar() {
+    fun cargar(): Boolean {
+        var todoBien = true
+
         try {
             val lector = ObjectInputStream(FileInputStream(rutaArchivo))
             datos = lector.readObject() as DatosGuardado
             lector.close()
 
         } catch (ex: IOException) {
+            todoBien = false
+            
             datos = getDatosPorDefecto()
 
             if (!guardar()) {
                 Log.e("ERROR", "No se han podido guardar los datos.")
             }
         }
+
+        return todoBien
     }
 
     /**
