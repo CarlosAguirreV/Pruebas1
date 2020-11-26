@@ -115,6 +115,7 @@ class MenuPrincipalFragment : Fragment() {
         root.btnSndMsc.setOnClickListener { showActividad(SonidosMusicaActivity::class.java) }
         root.btnGuardarCargar.setOnClickListener { showActividad(DatosActivity::class.java) }
         root.btnBd.setOnClickListener { showActividad(BdActivity::class.java) }
+        root.btnAnuncios.setOnClickListener { showActividad(AnunciosActivity::class.java) }
     }
 
     private fun showActividad(clase: Class<*>) {

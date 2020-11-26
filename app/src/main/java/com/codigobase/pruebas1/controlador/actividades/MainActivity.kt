@@ -15,6 +15,7 @@ import com.codigobase.pruebas1.modelo.GuardarCargar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 
+
 /**
  * Actividad que no tiene mas que una barra inferior de menu.
  * Va mostrando los fragmentos conforme se selecciona alguna opcion.

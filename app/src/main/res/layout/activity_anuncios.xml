@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controlador.actividades.AnunciosActivity">
+
+    <include
+        android:id="@+id/iBarraSuperior"
+        layout="@layout/barra_superior" />
+
+    <LinearLayout
+        android:id="@+id/lySuperior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iBarraSuperior"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/lblConsolaTitulo"
+            style="@style/TextoLectura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/consola" />
+
+        <TextView
+            android:id="@+id/lblMonedas"
+            style="@style/TextoLectura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="10dp"
+            android:text="@string/vacio"
+            android:textAlignment="textEnd"
+            app:drawableEndCompat="@drawable/ic_monedas" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnMostrarAnuncioBonif"
+        android:layout_below="@+id/lySuperior"
+        android:background="@color/colorLightGray"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/lblConsola"
+            style="@style/TextoLectura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnMostrarAnuncioBonif"
+        style="@style/ButtonBasic"
+        android:layout_above="@+id/lblBanner"
+        android:layout_margin="15dp"
+        android:enabled="false"
+        android:text="@string/cargar_anuncio_bonif" />
+
+    <TextView
+        android:id="@+id/lblBanner"
+        style="@style/TextoLectura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bannerInferior"
+        android:padding="10dp"
+        android:text="@string/banner_inferior"
+        app:drawableRightCompat="@drawable/ic_down" />
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/bannerInferior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111" />
+
+
+</RelativeLayout>

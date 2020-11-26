@@ -95,9 +95,8 @@
         android:text="@string/elementosExternos" />
 
     <Button
-        android:id="@+id/btnPublicidad"
+        android:id="@+id/btnAnuncios"
         style="@style/ButtonNormal"
-        android:backgroundTint="@color/colorDarkGray"
         android:text="@string/publicidad" />
 
     <Space

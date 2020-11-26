@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Pruebas1</string>
+    <string name="app_name">Pruebas 1</string>
 
     <!-- Separadores y marcadores -->
     <string name="sensores">Sensores</string>
@@ -111,8 +111,28 @@
     <string name="datosCargados">Datos cargados correctamente.</string>
     <string name="errorAlCargar">Ocurrio un fallo al cargar. Se cargaron los datos por defecto.</string>
 
-    <string name="publicidad">Uso de publicidad</string>
 
+    <!-- Uso de publicidad en las aplicaciones -->
+    <string name="publicidad">Uso de publicidad</string>
+    <string name="banner_inferior">Aquí aparecerá el banner.</string>
+    <string name="cargar_anuncio_bonif">Mostrar anuncio de bonificación.</string>
+    <string name="consola">Consola</string>
+
+    <string name="bnMostrado">Anuncio banner mostrado. + </string>
+    <string name="bnFallido">Anuncio banner fallido.</string>
+    <string name="bnAbierto">Anuncio banner abierto. + </string>
+    <string name="bnTocado">Anuncio banner tocado. + </string>
+    <string name="bnCancelado">Anuncio banner cancelado.</string>
+    <string name="bnCerrado">Anuncio banner cerrado.</string>
+
+    <string name="bfCargado">Anuncio de bonificacion cargado (boton habilitado).</string>
+    <string name="bfAbierto">Anuncio de bonificacion abierto.</string>
+    <string name="bfComenzado">Anuncio de bonificacion comenzado.</string>
+    <string name="bfCerrado">Anuncio de bonificacion cerrado (pedir otro video).</string>
+    <string name="bfVisto">Anuncio de bonificacion visto. + </string>
+    <string name="bfDejado">Anuncio de bonificacion dejado (aplicacion cerrada).</string>
+    <string name="bfNoCargado">Anuncio de bonificacion no cargado (¿Wifi apagado?).</string>
+    <string name="bfCompletado">Anuncio de bonificacion completado.</string>
 
     <!-- Sonidos y musica -->
     <string name="ins_musica_efectos">Al pulsar sobre los botones de play se ejecutara un sonido o una musica.\nPuedes controlar los canales izquierdo y derecho usando las barras de desplazamiento.\n\nSe ha empleado mediaPlayer para la musica y soundPool para los sonidos cortos.</string>
